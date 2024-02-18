@@ -9,6 +9,6 @@
 }
 
 .seats{
-    width: 110px;
-    height: 56px;
+    max-width: 110px;
+    max-height: 56px;
 }

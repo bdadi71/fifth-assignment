@@ -200,7 +200,7 @@
             </div>
             <!-- Bus Information Section Starts -->
             <!-- Bus Sit Section Starts -->
-            <div class="mt-8 ml-8 bg-white border border-white rounded-xl ">
+            <div class="mt-8 mx-8 bg-white border border-white rounded-3xl flex ">
                 <div class="mx-8 ">
                     <div class="text-left my-5">
                         <h3>Select Your Seat</h3>
@@ -253,7 +253,8 @@
                             <h1 class="text-sm mt-5">A</h1>
                         </div>
                         <div class="flex gap-10">
-                            <button class="seats px-10 py-4 text-base bg-[#F7F8F8] rounded-xl">A1</button>
+                            <button onclick="seats()"
+                                class="seats px-10 py-4 text-base bg-[#F7F8F8] rounded-xl">A1</button>
                             <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">A2</button>
                             <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">A3</button>
                             <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">A4</button>
@@ -303,65 +304,78 @@
                             <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">E4</button>
                         </div>
                     </div>
-                    <div class="flex mt-8 gap-5">
-                        <div>
-                            <h1 class="text-sm mt-5">F</h1>
-                        </div>
-                        <div class="flex gap-10">
-                            <button class="seats px-10 py-4 text-base bg-[#F7F8F8] rounded-xl">F1</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">F2</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">F3</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">F4</button>
-                        </div>
+                </div>
+                <div
+                    class=" border-l-2 border-r-0 border-t-0 border-b-0 border-opacity-30 border-dotted border-[#030712] w-full mx-8">
+                    <div class="text-left my-5 ml-8">
+                        <h3>Select Your Seat</h3>
                     </div>
-                    <div class="flex mt-8 gap-5">
-                        <div>
-                            <h1 class="text-sm mt-5">G</h1>
+                    <hr class="mx-8">
+                    <div class=" bg-[#F7F8F8] rounded-xl m-8 p-8   ">
+                        <div class="flex gap-16  mb-10">
+                            <div class="flex flex-col p-8">
+                                <div class="flex mb-2">Seat <span
+                                        class="text-white text-sm bg-green-500 p-1 rounded-full selected-seats"></span>
+                                </div>
+                                <div class="seat-number-container text-left p-8 pl-2 pt-2">
+                                    <p>C1</p>
+                                    <p>C2</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex mb-2 p-8 pb-0">Class</div>
+                                <div class="train-class-container text-left p-8 pl-4
+                                pt-2">
+                                    <p>Economic</p>
+                                    <p>Economic</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex mb-2 p-8 pb-0">Price</div>
+                                <div class="price-container text-left  pl-10
+                                pt-2">
+                                    <p>550</p>
+                                    <p>550</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex gap-10">
-                            <button class="seats px-10 py-4 text-base bg-[#F7F8F8] rounded-xl">G1</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">G2</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">G3</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">G4</button>
+                        <div class=" flex justify-between ">
+                            <h1 class="  text-black text-lg font-extrabold">Total Price</h1>
+                            <p id="total-price" class="text-black text-lg font-extrabold "></p>
                         </div>
-                    </div>
-                    <div class="flex mt-8 gap-5">
-                        <div>
-                            <h1 class="text-sm mt-5">H</h1>
+                        <br>
+                        <div class="flex justify-center">
+                            <input class="p-6 rounded-lg" type="text" name="" id="" placeholder="Have any copupon?">
+                            <button class="text-white font-extrabold rounded-lg bg-green-500 p-5">Apply</button>
                         </div>
-                        <div class="flex gap-10">
-                            <button class="seats px-10 py-4 text-base bg-[#F7F8F8] rounded-xl">H1</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">H2</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">H3</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">H4</button>
+                        <br>
+                        <div class=" flex justify-between ">
+                            <h1 class="  text-black text-lg font-extrabold">Grand Price</h1>
+                            <p id="total-price" class="text-black text-lg font-extrabold "></p>
                         </div>
-                    </div>
-                    <div class="flex mt-8 gap-5">
-                        <div>
-                            <h1 class="text-sm mt-5">I</h1>
-                        </div>
-                        <div class="flex gap-10">
-                            <button class="seats px-10 py-4 text-base bg-[#F7F8F8] rounded-xl">I1</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">I2</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">I3</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">I4</button>
-                        </div>
-                    </div>
-                    <div class="flex mt-8 gap-5">
-                        <div>
-                            <h1 class="text-sm mt-5">J</h1>
-                        </div>
-                        <div class="flex gap-10">
-                            <button class="seats px-10 py-4 text-base bg-[#F7F8F8] rounded-xl">J1</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">J2</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">J3</button>
-                            <button class="seats px-10 p-4 text-base bg-[#F7F8F8] rounded-xl">J4</button>
-                        </div>
+                        <br><br>
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button class="btn bg-green-700 text-white text-2xl w-full"
+                            onclick="my_modal_1.showModal()">Next</button>
+                        <dialog id="my_modal_1" class="modal">
+                            <div class="modal-box text-center">
+                                <img class="mx-auto" src="images/success.png" alt="">
+                                <h3 class="font-bold text-lg text-green-500">Success</h3>
+                                <p class="py-4 text-black">Thank you for Booking Our Bus Seats.
+                                    We are working hard to find the best service and deals for you. <br>
+                                    <span class="opacity-60">Shortly you will find a confirmation in your email.</span>
+                                </p>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn">Close</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
-                <div></div>
-            </div>
-            <!-- Bus Sit Section Ends -->
+                <!-- Bus Sit Section Ends -->
         </section>
     </main>
     <footer>
